@@ -1,6 +1,48 @@
 # Effective Prompt
 
-Improve rough prompts before sending them to an AI agent. The skill preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt.
+Turn rough prompts into clear, agent-ready prompts.
+
+```bash
+npx effective-prompt@latest
+```
+
+![Effective Prompt demo](https://raw.githubusercontent.com/noeljabraham/The-Effective-Prompt/main/assets/demo.gif)
+
+`effective-prompt` preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt for Claude Code, Codex, and Google Antigravity.
+
+## Before and after
+
+### Coding
+
+**Before:** `Fix the login bug.`
+
+**After:**
+
+> Reproduce and diagnose the login failure before changing code. Fix the root cause while preserving existing behavior, add a regression test, run the relevant checks, and summarize the cause and solution. If reproduction details or logs are missing, ask for them first.
+
+### Writing
+
+**Before:** `Write a launch email.`
+
+**After:**
+
+> Write a concise product-launch email for existing customers. Use a confident, friendly tone and include a subject line, the primary customer benefit, and one clear call to action. Use only the product facts provided and identify any essential information that is still missing.
+
+### Research
+
+**Before:** `Compare Notion and Obsidian.`
+
+**After:**
+
+> Compare Notion and Obsidian for an individual building a long-term personal knowledge base. Evaluate offline access, data ownership, linking, extensibility, collaboration, learning curve, and current pricing using authoritative sources. Finish with a recommendation and explain which user profile should choose each product.
+
+### Business
+
+**Before:** `Make a marketing plan for my app.`
+
+**After:**
+
+> Create a practical 90-day marketing plan for my app using the product, audience, budget, and traction details I provide. Prioritize channels by expected impact and effort, define weekly actions and measurable success metrics, and separate assumptions from known facts. Ask for any missing information that would materially change the plan.
 
 ## Install
 
