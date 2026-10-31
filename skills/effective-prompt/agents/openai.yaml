@@ -1,0 +1,4 @@
+interface:
+  display_name: "Effective Prompt"
+  short_description: "Turn rough requests into clear AI prompts"
+  default_prompt: "Use $effective-prompt to improve my draft without changing its intent."
