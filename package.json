@@ -1,0 +1,39 @@
+{
+  "name": "effective-prompt",
+  "version": "0.1.0",
+  "description": "Install the Effective Prompt skill for Claude Code, Codex, and Google Antigravity.",
+  "type": "module",
+  "bin": {
+    "effective-prompt": "bin/install.mjs"
+  },
+  "files": [
+    "bin",
+    "skills"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noeljabraham/The-Effective-Prompt.git"
+  },
+  "homepage": "https://github.com/noeljabraham/The-Effective-Prompt#readme",
+  "bugs": {
+    "url": "https://github.com/noeljabraham/The-Effective-Prompt/issues"
+  },
+  "keywords": [
+    "agent-skills",
+    "ai",
+    "antigravity",
+    "claude-code",
+    "codex",
+    "prompt-engineering"
+  ],
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "dependencies": {
+    "skills": "^1.7.2"
+  }
+}
