@@ -1,6 +1,6 @@
 {
   "name": "effective-prompt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Install the Effective Prompt skill for Claude Code, Codex, and Google Antigravity.",
   "type": "module",
   "bin": {
