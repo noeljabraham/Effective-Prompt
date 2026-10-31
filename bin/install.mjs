@@ -8,7 +8,8 @@ const installArgs = [
   "add",
   "noeljabraham/The-Effective-Prompt",
   "--skill",
-  "effective-prompt",
+  "effective-prompt-quick",
+  "effective-prompt-interactive",
   "--global",
   "--copy",
   "--yes",
@@ -22,8 +23,24 @@ const installArgs = [
   "antigravity-cli"
 ];
 
+const removeLegacyArgs = [
+  "remove",
+  "effective-prompt",
+  "--global",
+  "--yes",
+  "--agent",
+  "claude-code",
+  "--agent",
+  "codex",
+  "--agent",
+  "antigravity",
+  "--agent",
+  "antigravity-cli"
+];
+
 if (process.argv.includes("--print-command")) {
   console.log(`skills ${installArgs.join(" ")}`);
+  console.log(`skills ${removeLegacyArgs.join(" ")}`);
   process.exit(0);
 }
 
@@ -38,4 +55,17 @@ if (result.error) {
   process.exit(1);
 }
 
-process.exit(result.status ?? 1);
+if (result.status !== 0) {
+  process.exit(result.status ?? 1);
+}
+
+const cleanup = spawnSync(process.execPath, [skillsCli, ...removeLegacyArgs], {
+  stdio: "inherit"
+});
+
+if (cleanup.error) {
+  console.error(`Could not remove the legacy skill: ${cleanup.error.message}`);
+  process.exit(1);
+}
+
+process.exit(cleanup.status ?? 1);

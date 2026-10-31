@@ -14,7 +14,7 @@ npx skills add noeljabraham/The-Effective-Prompt
 
 ![Effective Prompt demo](https://raw.githubusercontent.com/noeljabraham/The-Effective-Prompt/main/assets/demo.gif)
 
-`effective-prompt` preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt for Claude Code, Codex, and Google Antigravity.
+Effective Prompt preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt for Claude Code, Codex, and Google Antigravity. It installs separate Quick and Interactive skills so both modes appear in skill autocomplete.
 
 ## Before and after
 
@@ -65,6 +65,8 @@ No manual repository clone or GitHub URL is required. The launcher downloads the
 - Google Antigravity
 - Google Antigravity CLI
 
+When upgrading from the single-skill version, the launcher removes the obsolete `effective-prompt` entry after installing both replacements.
+
 Requires Node.js 22.20 or later.
 
 Alternatively, use skills.sh directly and choose the installation scope and agents interactively:
@@ -86,13 +88,13 @@ After installation, start a new agent session. In Antigravity CLI, you can inste
 Quick mode improves the prompt immediately:
 
 ```text
-/effective-prompt Write an email announcing our new product.
+/effective-prompt-quick Write an email announcing our new product.
 ```
 
 Interactive mode asks focused questions before rewriting it:
 
 ```text
-/effective-prompt interactive Write an email announcing our new product.
+/effective-prompt-interactive Write an email announcing our new product.
 ```
 
 ### Codex
@@ -100,13 +102,13 @@ Interactive mode asks focused questions before rewriting it:
 Use the Codex skill mention syntax:
 
 ```text
-$effective-prompt Write an email announcing our new product.
+$effective-prompt-quick Write an email announcing our new product.
 ```
 
 For interactive mode:
 
 ```text
-$effective-prompt interactive Write an email announcing our new product.
+$effective-prompt-interactive Write an email announcing our new product.
 ```
 
 You can also invoke the skill without including a draft. It will improve the most recent user-authored prompt candidate in the conversation. Passing the draft with the command is more reliable because the agent cannot act on it before improving it.
@@ -124,12 +126,12 @@ The skill checks relevant details such as the intended outcome, context, inputs,
 npx skills list --global --agent claude-code --agent codex --agent antigravity --agent antigravity-cli
 ```
 
-The output should include `effective-prompt`.
+The output should include `effective-prompt-quick` and `effective-prompt-interactive`.
 
 ## Uninstall
 
 ```bash
-npx skills remove effective-prompt --global --agent '*' --yes
+npx skills remove effective-prompt-quick effective-prompt-interactive --global --agent '*' --yes
 ```
 
 ## Development
@@ -139,4 +141,4 @@ npm install
 npm test
 ```
 
-The portable skill source is [`skills/effective-prompt/SKILL.md`](skills/effective-prompt/SKILL.md).
+The portable skill sources are [`skills/effective-prompt-quick/SKILL.md`](skills/effective-prompt-quick/SKILL.md) and [`skills/effective-prompt-interactive/SKILL.md`](skills/effective-prompt-interactive/SKILL.md).

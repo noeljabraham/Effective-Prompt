@@ -1,0 +1,4 @@
+interface:
+  display_name: "Effective Prompt Quick"
+  short_description: "Improve a prompt immediately without questions"
+  default_prompt: "Use $effective-prompt-quick to improve my draft without changing its intent."
