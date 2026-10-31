@@ -7,6 +7,7 @@ test("installs effective-prompt for the four supported agent targets", () => {
     encoding: "utf8"
   });
 
+  assert.match(output, /skills add noeljabraham\/The-Effective-Prompt/);
   assert.match(output, /--skill effective-prompt/);
   for (const agent of ["claude-code", "codex", "antigravity", "antigravity-cli"]) {
     assert.match(output, new RegExp(`--agent ${agent}(?:\\s|$)`));

@@ -3,12 +3,10 @@
 import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
 import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 
-const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const installArgs = [
   "add",
-  packageRoot,
+  "noeljabraham/The-Effective-Prompt",
   "--skill",
   "effective-prompt",
   "--global",

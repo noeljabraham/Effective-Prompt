@@ -6,6 +6,12 @@ Turn rough prompts into clear, agent-ready prompts.
 npx effective-prompt@latest
 ```
 
+Or install it directly through the skills.sh CLI:
+
+```bash
+npx skills add noeljabraham/The-Effective-Prompt
+```
+
 ![Effective Prompt demo](https://raw.githubusercontent.com/noeljabraham/The-Effective-Prompt/main/assets/demo.gif)
 
 `effective-prompt` preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt for Claude Code, Codex, and Google Antigravity.
@@ -46,13 +52,13 @@ npx effective-prompt@latest
 
 ## Install
 
-Install the latest version globally with one command:
+Install the latest version globally for all supported agents with the npm launcher:
 
 ```bash
 npx effective-prompt@latest
 ```
 
-No repository clone or GitHub URL is required. The installer adds the skill to:
+No manual repository clone or GitHub URL is required. The launcher downloads the skill from its public GitHub repository through the standard skills installer, allowing installations to contribute to its skills.sh listing. It adds the skill to:
 
 - Claude Code
 - OpenAI Codex
@@ -60,6 +66,12 @@ No repository clone or GitHub URL is required. The installer adds the skill to:
 - Google Antigravity CLI
 
 Requires Node.js 22.20 or later.
+
+Alternatively, use skills.sh directly and choose the installation scope and agents interactively:
+
+```bash
+npx skills add noeljabraham/The-Effective-Prompt
+```
 
 After installation, start a new agent session. In Antigravity CLI, you can instead run:
 
@@ -118,14 +130,6 @@ The output should include `effective-prompt`.
 
 ```bash
 npx skills remove effective-prompt --global --agent '*' --yes
-```
-
-## Alternative GitHub installation
-
-If npm is unavailable, install directly from GitHub:
-
-```bash
-npx skills add noeljabraham/The-Effective-Prompt --skill effective-prompt --global --copy --yes --agent claude-code --agent codex --agent antigravity --agent antigravity-cli
 ```
 
 ## Development
