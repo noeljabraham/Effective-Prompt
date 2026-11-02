@@ -14,7 +14,7 @@ npx skills add noeljabraham/The-Effective-Prompt
 
 ![Effective Prompt demo](https://raw.githubusercontent.com/noeljabraham/The-Effective-Prompt/main/assets/demo.gif)
 
-Effective Prompt preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt for Claude Code, Codex, and Google Antigravity. It installs separate Quick and Interactive skills so both modes appear in skill autocomplete.
+Effective Prompt preserves your intent, finds missing requirements and contradictions, and returns a clearer prompt for Claude Code, Codex, Google Antigravity, etc. It installs separate Quick and Interactive skills so both modes appear in skill autocomplete.
 
 ## Before and after
 
